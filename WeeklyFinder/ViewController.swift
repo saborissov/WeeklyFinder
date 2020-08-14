@@ -15,16 +15,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var YearInput: UITextField!
     @IBOutlet weak var resulyLabel: UILabel!
     
-    
-    
     @IBAction func findDay(_ sender: UIButton) {
         
         //Убираем опциональные типы с помощью условий проверки guard
         guard let day = dateInput.text, let month = monthInput.text, let year = YearInput.text else {
             return
         }
-        
-        
         
         let calendar = Calendar.current
         var dateComponents = DateComponents()
